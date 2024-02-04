@@ -31,3 +31,31 @@ body {
     text-wrap: balance;
   }
 }
+
+::-webkit-scrollbar {
+  width: .3rem;
+  height: 1rem;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgba(217, 217, 217, .8);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent
+}
+
+@layer base{
+  body {
+      @apply dark:bg-slate-800 bg-white
+  }
+}
+
+.dot {
+  transition: transform 0.4s;
+}
+
+input:checked ~ .dot {
+  transform: translateX(1rem);
+}
